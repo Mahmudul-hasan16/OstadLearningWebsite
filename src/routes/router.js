@@ -22,91 +22,91 @@ import PrivateRouter from "./PrivateRouter";
 
 const router = createBrowserRouter([
     {
-        path:'/',
-        element:<Main/>,
-        errorElement:<ErrorPage/>,
-        children:[
+        path: '/',
+        element: <Main />,
+        errorElement: <ErrorPage />,
+        children: [
             {
-                path:'/',
-                element:<Home/>,
-                loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                path: '/',
+                element: <Home />,
+                loader: () => fetch('https://server-ostad-mahmudul-hasan16.vercel.app/courses')
             },
             {
-                path:'/courses',
-                element:<Courses/>,
-                
-                children:[{
-                    path:'/courses',
-                    element:<Course/>,
-                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                path: '/courses',
+                element: <Courses />,
+
+                children: [{
+                    path: '/courses',
+                    element: <Course />,
+                    loader: () => fetch('https://server-ostad-mahmudul-hasan16.vercel.app/courses')
                 },
                 {
-                    path:'/courses/:id',
-                    element:<SingleCourse/>,
-                    loader: ({params}) =>{
-                        return fetch(`https://tyro-server.vercel.app/courses/${params.id}`)
+                    path: '/courses/:id',
+                    element: <SingleCourse />,
+                    loader: ({ params }) => {
+                        return fetch(`https://server-ostad-mahmudul-hasan16.vercel.app/courses/${params.id}`)
                     }
 
                 },
                 {
-                    path:'ai',
-                    element:<Ai/>,
-                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                    path: 'ai',
+                    element: <Ai />,
+                    loader: () => fetch('https://server-ostad-mahmudul-hasan16.vercel.app/courses')
                 },
                 {
-                    path:'Data',
-                    element:<Data/>,
-                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                    path: 'Data',
+                    element: <Data />,
+                    loader: () => fetch('https://server-ostad-mahmudul-hasan16.vercel.app/courses')
                 },
                 {
-                    path:'web',
-                    element:<Web/>,
-                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                    path: 'web',
+                    element: <Web />,
+                    loader: () => fetch('https://server-ostad-mahmudul-hasan16.vercel.app/courses')
                 },
                 {
-                    path:'Iot',
-                    element:<Iot/>,
-                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                    path: 'Iot',
+                    element: <Iot />,
+                    loader: () => fetch('https://server-ostad-mahmudul-hasan16.vercel.app/courses')
                 },
                 {
-                    path:'Marketing',
-                    element:<Marketing/>,
-                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                    path: 'Marketing',
+                    element: <Marketing />,
+                    loader: () => fetch('https://server-ostad-mahmudul-hasan16.vercel.app/courses')
                 },
                 {
-                    path:'dashboard',
-                    element:<Dashboard/>
+                    path: 'dashboard',
+                    element: <Dashboard />
                 },
                 {
-                    path:'instructor',
-                    element:<Instructor/>
+                    path: 'instructor',
+                    element: <Instructor />
                 },
                 {
-                    path:'checkout',
-                    element:<PrivateRouter><Checkout/></PrivateRouter>,
-                    loader: () =>fetch('https://tyro-server.vercel.app/courses')
+                    path: 'checkout',
+                    element: <PrivateRouter><Checkout /></PrivateRouter>,
+                    loader: () => fetch('https://server-ostad-mahmudul-hasan16.vercel.app/courses')
                 }
-            ]
+                ]
             },
             {
-                path:'faq',
-                element:<Faq/>
+                path: 'faq',
+                element: <Faq />
             },
             {
-                path:'blog',
-                element:<Blog/>
+                path: 'blog',
+                element: <Blog />
             },
             {
-                path:'about',
-                element:<About/>
+                path: 'about',
+                element: <About />
             },
             {
-                path:'login',
-                element:<Login/>
+                path: 'login',
+                element: <Login />
             },
             {
-                path:'register',
-                element:<Register/>
+                path: 'register',
+                element: <Register />
             }
         ]
     }
