@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { ProfileContext } from '../../context/UserContext';
 
+
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -41,9 +42,9 @@ const Header = () => {
             className="inline-flex items-center"
           >
             <span>
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
+              {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zm-7.518-.267A8.25 8.25 0 1120.25 10.5M8.288 14.212A5.25 5.25 0 1117.25 10.5" />
-              </svg>
+              </svg> */}
             </span>
             <span className='uppercase text-3xl font-bold p-2'>
               Ostad
